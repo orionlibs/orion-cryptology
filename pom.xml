@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.orionlibs</groupId>
     <artifactId>orion-cryptology</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <name>Orion Cryptology</name>
     <description>Java cryptographic, encoding and hashing library</description>
     <url>https://github.com/orionlibs/orion-cryptology</url>
@@ -236,7 +236,7 @@
         <dependency>
             <groupId>io.github.orionlibs</groupId>
             <artifactId>orion-configuration</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
 
 
