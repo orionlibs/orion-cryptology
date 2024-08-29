@@ -2,7 +2,7 @@ package io.github.orionlibs.orion_cryptology.encryption.rsa.tasks;
 
 import io.github.orionlibs.orion_cryptology.encryption.EncryptionAlgorithm;
 import io.github.orionlibs.orion_cryptology.encryption.rsa.RSAEncryptionService;
-import io.github.orionlibs.orion_stream.CloseableResource;
+import io.github.orionlibs.orion_object.ResourceCloser;
 import java.io.BufferedOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -75,8 +75,8 @@ public class GenerateRSAKeyTask
         }
         finally
         {
-            CloseableResource.run(objectWriter);
-            CloseableResource.run(fileWriter);
+            ResourceCloser.closeResource(objectWriter);
+            ResourceCloser.closeResource(fileWriter);
         }
     }
 }

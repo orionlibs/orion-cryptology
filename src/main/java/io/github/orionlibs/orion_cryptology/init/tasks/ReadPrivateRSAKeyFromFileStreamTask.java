@@ -2,7 +2,7 @@ package io.github.orionlibs.orion_cryptology.init.tasks;
 
 import io.github.orionlibs.orion_assert.Assert;
 import io.github.orionlibs.orion_cryptology.encryption.EncryptionAlgorithm;
-import io.github.orionlibs.orion_stream.CloseableResource;
+import io.github.orionlibs.orion_object.ResourceCloser;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
@@ -30,8 +30,8 @@ public class ReadPrivateRSAKeyFromFileStreamTask
         }
         finally
         {
-            CloseableResource.run(ois);
-            CloseableResource.run(privateRSAKeyStream);
+            ResourceCloser.closeResource(ois);
+            ResourceCloser.closeResource(privateRSAKeyStream);
         }
     }
 }
